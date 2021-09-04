@@ -1,1 +1,47 @@
 {layout name="layout" replace="[__REPLACE__]" /} 
+
+{include file="common/user_head" /} 
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <table class="table">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>pass</th>
+                <th>group</th>
+                <th>tag</th>
+                <th>sex</th>
+                <th>age</th>
+                <th>mail</th>
+                <th>tell</th>
+                <th>content</th>
+                <th>create</th>
+                <th>update</th>
+                <th>操作</th>                
+            </tr>
+            {volist name="userlist" id="vo"} 
+
+                <tr>
+                    <td>{$vo.Id}</td>
+                    <td>{$vo.name}</td>
+                    <td>{$vo.pass}</td>
+                    <td>{$vo.group}</td>
+                    <td>{$vo.tag}</td>
+                    <td>{$vo.sex}</td>
+                    <td>{$vo.age}</td>
+                    <td>{$vo.mail}</td>
+                    <td>{$vo.tell}</td>
+                    <td>{$vo.content}</td>
+                    <td>{$vo.create}</td>
+                    <td>{$vo.update}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            {/volist}
+        </table>
+    </div>
+    <div class="col-md-1"></div>
+</div>

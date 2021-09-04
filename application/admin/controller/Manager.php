@@ -17,8 +17,24 @@ class Manager extends Controller
     {
         return $this->fetch();
     }
+    public function user()
+    {
+        $list=\app\admin\model\User::all();
+        $this->assign('userlist',$list);
+        return $this->fetch();
+    }
+    public function user_add()
+    {
 
+    }
+    public function user_do()
+    {
 
+    }
+    public function user_select($id)
+    {
+        
+    }
     //
     public function quit()
     {
